@@ -22,43 +22,43 @@ go get -u github.com/flavioespinoza/godash
 #### Count words
 
 ```go
+package main
 
-	package main
-	
-	import(
-		"fmt"
-		"github.com/flavioespinoza/godash"
+import (
+	"fmt"
+	"github.com/flavioespinoza/godash"
+	"strings"
+)
+
+func Main() {
+
+	// Counting words
+	const (
+		words = "What's the most you ever lost on a coin toss?"
 	)
-	
-	func Main(){
-		
-		// Counting words
-		const (
-			words = "What's the most you ever lost on a coin toss?"
-		)
-	    
-		var result map[string]int
-		err:=godash.In(strings.Split(words," ")).
-			Map(func(word string)string{
-			return strings.Trim(strings.Trim(word,"\n\t "),".,!")
+
+	var result map[string]int
+	err := godash.In(strings.Split(words, " ")).
+		Map(func(word string) string {
+			return strings.Trim(strings.Trim(word, "\n\t "), ".,!")
 		}).
-			Filter(func(word string)bool{
-			return word!=""
+		Filter(func(word string) bool {
+			return word != ""
 		}).
-			Reduce(func(Map map[string]int,word string)map[string]int{
-			Map[word] = Map[word]+1
+		Reduce(func(Map map[string]int, word string) map[string]int {
+			Map[word] = Map[word] + 1
 			return Map
-		},map[string]int{}).
-			Out(&result)
-		fmt.Println(err)
-		fmt.Println(result["coin"])
-		fmt.Println(result["the"])
-		
-	    // Output:
-		// <nil>
-		// 6
-		// 3
-	}
+		}, map[string]int{}).
+		Out(&result)
+	fmt.Println(err)
+	fmt.Println(result["coin"])
+	fmt.Println(result["the"])
+
+	// Output:
+	// <nil>
+	// 1
+	// 1
+}
 ```
 #### Map Filter Reduce to calculate an bill
 

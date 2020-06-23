@@ -3,7 +3,7 @@ Lodash inspired utility library delivering modularity, performance & extras.
 
 ## Installation
 ```bash
-go get
+go get -u github.com/flavioespinoza/godash
 ```
 
 ```bash

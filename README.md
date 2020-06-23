@@ -35,17 +35,17 @@ git push -u origin master
 	
 	import(
 		"fmt"
-		"github.com/Mparaiso/lodash-go"
+		"github.com/flavioespinoza/godash"
 	)
 	
 	func Main(){
+		
 		// Counting words
-		const words=`Lorem ipsum nascetur,
-			nascetur adipiscing. Aenean commodo nascetur.
-            Aenean nascetur commodo ridiculus nascetur,
-            commodo ,nascetur consequat.`
-
-	    var result map[string]int
+		const (
+			words = "What's the most you ever lost on a coin toss?"
+		)
+	    
+		var result map[string]int
 		err:=godash.In(strings.Split(words," ")).
 			Map(func(word string)string{
 			return strings.Trim(strings.Trim(word,"\n\t "),".,!")
@@ -76,7 +76,7 @@ git push -u origin master
 	
 	import(
 		"fmt"
-		"github.com/Mparaiso/lodash-go"
+		"github.com/flavioespinoza/godash"
 	)
 	
 	func Main(){
@@ -120,7 +120,7 @@ git push -u origin master
 	
 	import(
 		"fmt"
-		"github.com/Mparaiso/lodash-go"
+		"github.com/flavioespinoza/godash"
 	)
 	
 	func Main(){
@@ -142,7 +142,7 @@ git push -u origin master
 	
 	import(
 		"fmt"
-		"github.com/mparaiso/lodash-go"
+		"github.com/flavioespinoza/godash"
 	)
 	
 	func Main(){
@@ -165,7 +165,7 @@ git push -u origin master
 ```go
 	package main
 
-	import "github.com/Mparaiso/lodash-go"
+	import "github.com/flavioespinoza/godash"
 	import "fmt"
 		
 	func Main(){
@@ -192,7 +192,7 @@ git push -u origin master
 ```go
 	package main
 	
-	import "github.com/mparaiso/lodash-go" 
+	import "github.com/flavioespinoza/godash" 
 	import "fmt"
 	
 	func Main(){
@@ -238,7 +238,7 @@ git push -u origin master
 ```go
 	package main
 	
-	import "github.com/Mparaiso/lodash-go"
+	import "github.com/flavioespinoza/godash"
 	import "fmt"
 	
 	func Main(){

@@ -34,7 +34,8 @@ func main() {
 
 	// Counting words
 	const (
-		words = "How much wood would a woodchuck chuck if a woodchuck could chuck wood? A woodchuck would chuck as much wood as a woodchuck could chuck if a woodchuck could chuck wood."
+		words = "How much wood would a woodchuck chuck if a woodchuck could chuck wood? " +
+			"A woodchuck would chuck as much wood as a woodchuck could chuck if a woodchuck could chuck wood."
 	)
 
 	var result map[string]int

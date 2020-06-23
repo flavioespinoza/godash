@@ -46,7 +46,7 @@ git push -u origin master
             commodo ,nascetur consequat.`
 
 	    var result map[string]int
-		err:=lo.In(strings.Split(words," ")).
+		err:=godash.In(strings.Split(words," ")).
 			Map(func(word string)string{
 			return strings.Trim(strings.Trim(word,"\n\t "),".,!")
 		}).
@@ -94,7 +94,7 @@ git push -u origin master
 			{"MacBook White",2,400,false},
 			{"Ipad air", 5, 200,true},
 		}
-		err:=lo.In(orders).
+		err:=godash.In(orders).
 			Filter(func(order Order)bool{
 				return order.InStock
 			}).
@@ -126,7 +126,7 @@ git push -u origin master
 	func Main(){
 	
 		var difference []string
-		err := lo.Difference([]string{"a", "b", "c", "d"}, []string{"a", "c", "x"}, &difference)
+		err := godash.Difference([]string{"a", "b", "c", "d"}, []string{"a", "c", "x"}, &difference)
 		fmt.Println(err)
 		fmt.Println(difference)
 		
@@ -147,7 +147,7 @@ git push -u origin master
 	
 	func Main(){
 		var evenNumbers []int
-		err := lo.Filter([]int{0, 1, 2, 3, 4}, func(element int) bool {
+		err := godash.Filter([]int{0, 1, 2, 3, 4}, func(element int) bool {
 			return element % 2 == 0
 		}, &evenNumbers)
 		
@@ -170,7 +170,7 @@ git push -u origin master
 		
 	func Main(){
 		var mean int
-		err := lo.Reduce([]int{10, 20, 30}, func(result int, element int, index int, collection []int) int {
+		err := godash.Reduce([]int{10, 20, 30}, func(result int, element int, index int, collection []int) int {
 			if l := len(collection); l-1 == index {
 				return (result + element) / l
 			} else {
@@ -206,7 +206,7 @@ git push -u origin master
 	   	}
 				
 	    var adultPeopleByCountry map[string]int
-		err := lo.In([]Person{
+		err := godash.In([]Person{
 			{"John", "France", 18},
 			{"Jane", "England", 16},
 			{"Jack", "France", 20},
@@ -247,7 +247,7 @@ git push -u origin master
 		    Population int
 		}
 		var total int
-		err := lo.In([]Country{{"France", 1000}, {"Spain", 5000}}).
+		err := godash.In([]Country{{"France", 1000}, {"Spain", 5000}}).
 			Map(func(country Country) int { return country.Population }).
 			Reduce(func(total int, count int) int { return total + count }, 0).
 			Out(&total)

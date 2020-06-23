@@ -30,11 +30,11 @@ import (
 	"strings"
 )
 
-func Main() {
+func main() {
 
 	// Counting words
 	const (
-		words = "What's the most you ever lost on a coin toss?"
+		words = "How much wood would a woodchuck chuck if a woodchuck could chuck wood? A woodchuck would chuck as much wood as a woodchuck could chuck if a woodchuck could chuck wood."
 	)
 
 	var result map[string]int
@@ -48,16 +48,19 @@ func Main() {
 		Reduce(func(Map map[string]int, word string) map[string]int {
 			Map[word] = Map[word] + 1
 			return Map
-		}, map[string]int{}).
-		Out(&result)
+		}, map[string]int{}).Out(&result)
+
 	fmt.Println(err)
-	fmt.Println(result["coin"])
-	fmt.Println(result["the"])
+	fmt.Println(result["wood"])
+	fmt.Println(result["would"])
+	fmt.Println(result["woodchuck"])
 
 	// Output:
 	// <nil>
-	// 1
-	// 1
+	// 3
+	// 2
+	// 5
+}
 }
 ```
 #### Map Filter Reduce to calculate an bill

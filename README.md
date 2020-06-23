@@ -59,8 +59,8 @@ git push -u origin master
 		},map[string]int{}).
 			Out(&result)
 		fmt.Println(err)
-		fmt.Println(result["nascetur"])
-		fmt.Println(result["commodo"])
+		fmt.Println(result["coin"])
+		fmt.Println(result["the"])
 		
 	    // Output:
 		// <nil>

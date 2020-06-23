@@ -6,14 +6,6 @@ Lodash inspired utility library delivering modularity, performance & extras.
 go get -u github.com/flavioespinoza/godash
 ```
 
-```bash
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/flavioespinoza/godash.git
-git push -u origin master
-```
-
 ## Methods
 
 - [x] Map
